@@ -1,9 +1,17 @@
+import { useEffect } from "react";
 import { ThemeToggle } from "../components/ThemeToggle";
 import { StarBackground } from "../components/StarBackground";
 import { Navbar } from "../components/Navbar";
 import { HeroSection } from "../components/HeroSection";
+import { AboutSection } from "../components/AboutSection";
+import { SkillsSection } from "../components/SkillsSection";
 
 export const Home = () => {
+
+    // scroll to top if page is reloaded
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
 
     return(
         <>
@@ -20,6 +28,8 @@ export const Home = () => {
                 {/* Main Content */}
                 <main>
                     <HeroSection />
+                    <AboutSection />
+                    <SkillsSection />
                 </main>
 
                 {/* Footer */}
