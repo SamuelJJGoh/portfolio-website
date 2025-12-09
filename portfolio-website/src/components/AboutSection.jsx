@@ -22,7 +22,7 @@ export const AboutSection = () => {
                         <p className="text-muted-foreground">
                             I primarily build dynamic web applications using the MERN stack, crafting clean and responsive 
                             interfaces with React and designing robust backend systems with Node.js and Express. 
-                            I also have experience working with both SQL and NoSQL databases.
+                            I have experience working with both SQL and NoSQL databases.
                         </p>
                         
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -44,7 +44,7 @@ export const AboutSection = () => {
                                 <div className="text-left">
                                     <h4 className="font-semibold text-lg">Web Development</h4>
                                     <p className="text-muted-foreground">
-                                        Creating responsive websites and web applications with modern frameworks.
+                                        Creating responsive websites and web applications using modern frameworks.
                                     </p>
                                 </div>
                             </div>
@@ -55,9 +55,9 @@ export const AboutSection = () => {
                                     <User className="h-6 w-6 text-primary"/>
                                 </div>
                                 <div className="text-left">
-                                    <h4 className="font-semibold text-lg">UI/UX Design</h4>
+                                    <h4 className="font-semibold text-lg">Automation & Scripting</h4>
                                     <p className="text-muted-foreground">
-                                        Designing intuitive user interfaces and seamless user experiences.
+                                        Building automation tools and scripts to streamline workflows and improve efficiency.
                                     </p>
                                 </div>
                             </div>
@@ -68,9 +68,9 @@ export const AboutSection = () => {
                                     <Briefcase className="h-6 w-6 text-primary"/>
                                 </div>
                                 <div className="text-left">
-                                    <h4 className="font-semibold text-lg">Project Management</h4>
+                                    <h4 className="font-semibold text-lg">API & Backend Development</h4>
                                     <p className="text-muted-foreground">
-                                        Leading projects from conception to completion with agile methodologies.
+                                        Designing and developing robust server-side logic, REST APIs, and database integrations.
                                     </p>
                                 </div>
                             </div>

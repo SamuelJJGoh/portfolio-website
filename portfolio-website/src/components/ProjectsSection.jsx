@@ -4,26 +4,34 @@ const projects = [
     {
         id: 1,
         title: "BlogNest",
-        description: "A Flask-based Blog website with Bootstrap styling and PostgreSQL database support.",
+        description: "A Flask-based blog application with Bootstrap styling and a PostgreSQL database.",
         image: "/projects/BlogNest.png",
-        tags: ["Python", "Flask", "Bootstrap", "SQLAlchemy", "Jinja"],
+        tags: ["Python", "Flask", "Bootstrap", "SQLAlchemy", "Jinja2"],
         url: "https://github.com/SamuelJJGoh/python-flask-blog-website"
     },
     {
         id: 2,
         title: "Weather App",
-        description: "Responsive weather app with an Express proxy: search cities, view current conditions and 5‑day forecasts, toggle °C/°F, and save favourites.",
+        description: "Responsive weather app with an Express proxy: search cities, view current conditions and 5‑day forecasts, toggle °C/°F, and save favourite cities.",
         image: "/projects/WeatherApp.png",
-        tags: ["JavaScript", "HTML/CSS", "Node.js", "Express.js"],
+        tags: ["JavaScript", "HTML/CSS", "Node.js", "Express"],
         url: "https://github.com/SamuelJJGoh/weather-app"
     },
     {
         id: 3,
-        title: "PL Match Preditor",
+        title: "PL Match Predictor",
         description: "A machine learning model that uses scikit-learn to predict Premier League matches.",
         image: "/projects/PremierLeaguePrediction.png",
-        tags: ["Python", "Sci-kit Learn", "Pandas"],
+        tags: ["Python", "scikit-learn", "pandas"],
         url: "https://github.com/SamuelJJGoh/premier-league-match-prediction"
+    },
+    {
+        id: 4,
+        title: "Automated Birthday Reminder",
+        description: "Daily email reminder that checks a CSV of friends’ birthdays (UK timezone) and emails me when there’s a match.",
+        image: "/projects/BirthdayReminder.png",
+        tags: ["Python", "Automation", "pandas", "SMTP"],
+        url: "https://github.com/SamuelJJGoh/automated-birthday-reminder"
     },
     
 ]
@@ -36,7 +44,7 @@ export const ProjectsSection = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center"> Featured<span className="text-primary"> Projects</span> </h2>
 
                 <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                    Here are some recent projects. Click the external link icon at the bottom to explore each one.
+                    Here are some recent projects. Click the external link icon below each card to explore them.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -70,7 +78,7 @@ export const ProjectsSection = () => {
                 <div className="text-center mt-12">
                     <a className="cosmic-button w-fit flex items-center mx-auto gap-2" 
                        href="https://github.com/SamuelJJGoh" target="_blank">
-                        Check My Github <ArrowRight size={16}/>
+                        Check My GitHub <ArrowRight size={16}/>
                     </a>
                 </div>
             </div>
