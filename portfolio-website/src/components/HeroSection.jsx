@@ -8,7 +8,7 @@ export const HeroSection = () => {
                 <div className="space-y-6">
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                         <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
-                        <span className="text-primary opacity-0 animate-fade-in-delay-1"> Samuel Goh,</span>
+                        <span className="block sm:inline text-primary opacity-0 animate-fade-in-delay-1"> Samuel Goh,</span>
                         <span className="block text-gradient opacity-0 animate-fade-in-delay-2">a Full-Stack Developer</span>
                     </h1>
 
