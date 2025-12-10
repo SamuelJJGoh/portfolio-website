@@ -92,7 +92,7 @@ export const ContactSection = () => {
                         </div>
 
                         <div className="pt-8">
-                            <h4 className="font-medium mb-4">Connect With Me</h4>
+                            <h4 className="font-semibold mb-4 text-2xl">Connect With Me</h4>
                             <div className="flex space-x-4 justify-center">
                                 <a
                                     href="https://www.linkedin.com/in/samuel-jun-je-goh/"
@@ -100,7 +100,7 @@ export const ContactSection = () => {
                                     rel="noreferrer"
                                     className="text-muted-foreground hover:text-primary transition-colors"
                                 >
-                                    <FaLinkedin className="h-6 w-6" />
+                                    <FaLinkedin className="h-8 w-8" />
                                 </a>
                                 <a
                                     href="https://www.instagram.com/samueljj.goh/"
@@ -108,7 +108,7 @@ export const ContactSection = () => {
                                     rel="noreferrer"
                                     className="text-muted-foreground hover:text-primary transition-colors"
                                 >
-                                    <FaInstagram className="h-6 w-6" />
+                                    <FaInstagram className="h-8 w-8" />
                                 </a>
                             </div>
                         </div>

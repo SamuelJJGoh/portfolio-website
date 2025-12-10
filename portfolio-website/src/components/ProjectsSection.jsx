@@ -1,4 +1,5 @@
 import { ArrowRight, ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 const projects = [
     {
@@ -14,7 +15,7 @@ const projects = [
         title: "Weather App",
         description: "Responsive weather app with an Express proxy: search cities, view current conditions and 5‑day forecasts, toggle °C/°F, and save favourite cities.",
         image: "/projects/WeatherApp.png",
-        tags: ["JavaScript", "HTML/CSS", "Node.js", "Express"],
+        tags: ["JavaScript", "HTML/CSS", "Node.js", "Express.js"],
         url: "https://github.com/SamuelJJGoh/weather-app"
     },
     {
@@ -76,9 +77,9 @@ export const ProjectsSection = () => {
                 </div>
 
                 <div className="text-center mt-12">
-                    <a className="cosmic-button w-fit flex items-center mx-auto gap-2" 
+                    <a className="cosmic-button w-fit flex items-center mx-auto gap-3" 
                        href="https://github.com/SamuelJJGoh" target="_blank">
-                        Check My GitHub <ArrowRight size={16}/>
+                        <FaGithub /> Check My GitHub <ArrowRight size={16}/>
                     </a>
                 </div>
             </div>

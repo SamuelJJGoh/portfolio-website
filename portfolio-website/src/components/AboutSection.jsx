@@ -1,4 +1,4 @@
-import { Code, User, Briefcase } from "lucide-react";
+import { Code, Workflow, Server } from "lucide-react";
 
 export const AboutSection = () => {
 
@@ -49,28 +49,30 @@ export const AboutSection = () => {
                                 </div>
                             </div>
                         </div>
+                        
                         <div className="gradient-border p-6 card-hover">
                             <div className="flex items-start gap-4">
                                 <div className="p-3 rounded-full bg-primary/10">
-                                    <User className="h-6 w-6 text-primary"/>
-                                </div>
-                                <div className="text-left">
-                                    <h4 className="font-semibold text-lg">Automation & Scripting</h4>
-                                    <p className="text-muted-foreground">
-                                        Building automation tools and scripts to streamline workflows and improve efficiency.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="gradient-border p-6 card-hover">
-                            <div className="flex items-start gap-4">
-                                <div className="p-3 rounded-full bg-primary/10">
-                                    <Briefcase className="h-6 w-6 text-primary"/>
+                                    <Server className="h-6 w-6 text-primary"/>
                                 </div>
                                 <div className="text-left">
                                     <h4 className="font-semibold text-lg">API & Backend Development</h4>
                                     <p className="text-muted-foreground">
                                         Designing and developing robust server-side logic, REST APIs, and database integrations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="gradient-border p-6 card-hover">
+                            <div className="flex items-start gap-4">
+                                <div className="p-3 rounded-full bg-primary/10">
+                                    <Workflow className="h-6 w-6 text-primary"/>
+                                </div>
+                                <div className="text-left">
+                                    <h4 className="font-semibold text-lg">Automation & Scripting</h4>
+                                    <p className="text-muted-foreground">
+                                        Building automation tools and scripts to streamline workflows and improve efficiency.
                                     </p>
                                 </div>
                             </div>

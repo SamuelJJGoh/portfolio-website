@@ -1,14 +1,14 @@
 import {cn} from '@/lib/utils.js'
-import { Menu, X } from 'lucide-react';
+import { Menu, X, House, User, CodeXml, GitCompare, Mail } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const navItems = [
-    {name: "Home", href: "#hero"},
-    {name: "About", href: "#about"},
-    {name: "Skills", href: "#skills"},
-    {name: "Projects", href: "#projects"},
-    {name: "Contact", href: "#contact"}
-]
+    { icon: <House size={16} />, name: "Home", href: "#hero" },
+    { icon: <User size={16} />, name: "About", href: "#about" },
+    { icon: <CodeXml size={16} />, name: "Skills", href: "#skills" },
+    { icon: <GitCompare size={16} />, name: "Projects", href: "#projects" },
+    { icon: <Mail size={16} />, name: "Contact", href: "#contact" }
+];
 
 export const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -25,8 +25,8 @@ export const Navbar = () => {
 
     return (
         <>
-            <nav className={cn("fixed w-full z-40 transition-all duration-300 py-4", 
-                                isScrolled ? "bg-background/80 backdrop-blur-md shadow-xs" : "py-4"
+            <nav className={cn("fixed w-full z-40 transition-all duration-300 py-6", 
+                                isScrolled ? "bg-background/80 backdrop-blur-md shadow-xs" : "py-6"
             )}>
 
                 <div className='container flex items-center justify-around'>
@@ -39,7 +39,8 @@ export const Navbar = () => {
                     {/* desktop navbar */}
                     <div className='hidden md:flex space-x-8'>
                         {navItems.map((item, key) => (
-                            <a key={key} href={item.href} className='text-foreground/80 hover:text-primary transition-colors duration-300'>
+                            <a key={key} href={item.href} className='text-foreground/80 hover:text-primary transition-colors duration-300 flex items-center gap-2'>
+                                {item.icon}
                                 {item.name}
                             </a>
                         ))}
@@ -57,10 +58,11 @@ export const Navbar = () => {
                                         "transition-all duration-300 md:hidden",
                                         isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none",
                     )}>
-                        <div className='flex flex-col space-y-8 text-xl items-center'>
+                        <div className='flex flex-col space-y-8 text-xl items-start text-left'>
                         {navItems.map((item, key) => (
-                            <a key={key} href={item.href} className='text-foreground/80 hover:text-primary transition-colors duration-300'
+                            <a key={key} href={item.href} className='text-foreground/80 hover:text-primary transition-colors duration-300 flex items-center gap-2 leading-none'
                                onClick={() => setIsMenuOpen(false)}>
+                                {item.icon}
                                 {item.name}
                             </a>
                         ))}
