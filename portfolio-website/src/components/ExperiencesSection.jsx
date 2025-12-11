@@ -29,8 +29,8 @@ export const ExperiencesSection = () => {
                         <div className="mt-10">
                             <ul className="list-disc space-y-2 text-left pl-4 text-muted-foreground text-md">
                                 <li>Developed mobile UI components using React Native in a fast-paced startup environment</li>
-                                <li>Built reusable front-end components using TypeScript and improved UI flows</li>
-                                <li>Worked with GitHub workflows, code reviews, managing pull requests and agile development practices</li>
+                                <li>Built reusable UI components using TypeScript and improved UI flows</li>
+                                <li>Worked with GitHub workflows, managed pull requests, participated in code reviews, and followed agile development practices</li>
                                 <li>Contributed to implementing new features and resolving UI bugs across the app</li>
                             </ul>
                         </div>

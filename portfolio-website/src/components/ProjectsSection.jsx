@@ -14,7 +14,7 @@ const projects = [
         title: "Weather App",
         description: "Responsive weather app with an Express proxy: search cities, view current conditions and 5‑day forecasts, toggle °C/°F, and save favourite cities.",
         image: "/projects/WeatherApp.png",
-        tags: ["JavaScript", "HTML/CSS", "Node.js", "Express.js"],
+        tags: ["JavaScript", "HTML/CSS", "Node.js", "Express"],
         url: "https://github.com/SamuelJJGoh/weather-app"
     },
     {
