@@ -1,4 +1,5 @@
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 export const HeroSection = () => {
     
@@ -17,9 +18,13 @@ export const HeroSection = () => {
                         I turn ideas into clean, functional web experiences.
                     </p>
 
-                    <div className="pt-4 opacity-0 animate-fade-in-delay-4">
+                    <div className="flex items-center justify-center gap-5 pt-4 opacity-0 animate-fade-in-delay-4">
                         <a href="#projects" className="cosmic-button">
                             View My Work
+                        </a>
+                        <a className="cosmic-button w-fit flex items-center gap-3" 
+                           href="https://github.com/SamuelJJGoh" target="_blank">
+                            <FaGithub /> Check My GitHub <ArrowRight size={16}/>
                         </a>
                     </div>
 

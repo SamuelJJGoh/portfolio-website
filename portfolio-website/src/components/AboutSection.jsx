@@ -1,6 +1,44 @@
 import { Code, Workflow, Server } from "lucide-react";
+import { FaRegFilePdf } from "react-icons/fa6";
+import { useEffect, useState } from "react";
+
+const adjectives = ["Passionate", "Ambitious", "Results-Driven", "Collaborative"];
 
 export const AboutSection = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [displayText, setDisplayText] = useState("");
+    const [isDeleting, setIsDeleting] = useState(false);
+
+    useEffect(() => {
+        const currentWord = adjectives[currentIndex];
+        const typingSpeed = isDeleting ? 60 : 120;
+        const pauseDuration = 1200;
+
+        const handleTyping = () => {
+            if (!isDeleting && displayText === currentWord) {
+                // pause before deleting
+                setTimeout(() => setIsDeleting(true), pauseDuration);
+                return;
+            }
+
+            if (isDeleting && displayText === "") {
+                // move to next word
+                setIsDeleting(false);
+                setCurrentIndex((prev) => (prev + 1) % adjectives.length);
+                return;
+            }
+
+            const nextText = isDeleting 
+                ? currentWord.slice(0, displayText.length - 1)
+                : currentWord.slice(0, displayText.length + 1);
+            
+            setDisplayText(nextText);
+        }
+    
+        const timer = setTimeout(handleTyping, typingSpeed);
+
+        return () => clearTimeout(timer); // clean-up code: cancel the scheduled step if the component re-renders or unmounts before the timeout fires
+    }, [displayText, isDeleting, currentIndex]);
 
     return (
         <section id="about" className="py-24 px-4 relative">
@@ -11,7 +49,9 @@ export const AboutSection = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
-                        <h3 className="text-2xl font-semibold">Passionate Full-Stack Developer</h3>
+                        <h3 className="text-2xl font-semibold">
+                            <span className="text-primary">{displayText}</span> Full-Stack Developer
+                        </h3>
 
                         <p className="text-muted-foreground">
                             I am a Computer Science and Mathematics graduate from the University of Manchester
@@ -29,7 +69,8 @@ export const AboutSection = () => {
                             <a href="#contact" className="cosmic-button">
                                 Get In Touch
                             </a>
-                            <a href="/SamuelGohCV.pdf" download className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
+                            <a href="/SamuelGohCV.pdf" download className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 flex items-center gap-2">
+                                <FaRegFilePdf className="h-5 w-5" />
                                 Download CV
                             </a>
                         </div>
@@ -87,3 +128,5 @@ export const AboutSection = () => {
         </section>
     );
 }
+
+

@@ -150,9 +150,25 @@ that work with variants like hover, focus and lg */
 
 @utility gradient-border {
   @apply relative rounded-md;
-  background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
-  background-clip: padding-box;
+  background:
+    linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+    linear-gradient(120deg, rgba(139, 92, 246, 0.6), rgba(99, 102, 241, 0.6), rgba(56, 189, 248, 0.6), rgba(139, 92, 246, 0.6)) border-box;
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  animation: border-shift 8s linear infinite;
   border: 1px solid transparent;
+}
+
+@keyframes border-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @utility cosmic-button {

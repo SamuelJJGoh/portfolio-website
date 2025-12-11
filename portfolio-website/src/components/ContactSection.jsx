@@ -1,5 +1,5 @@
-import { Mail, Phone, Map, Send } from "lucide-react";
-import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import { Mail, Phone, MapPin, Send, User, MessageCircle } from "lucide-react";
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 import {cn} from '@/lib/utils';
 import {useToast} from '@/hooks/use-toast';
 import { useState } from "react";
@@ -17,6 +17,7 @@ export const ContactSection = () => {
         setFormData({
             name: "",
             email: "",
+            subject: "",
             message: ""
         });
 
@@ -34,6 +35,7 @@ export const ContactSection = () => {
     const [formData, setFormData] = useState({
         name: "", 
         email: "", 
+        subject: "",
         message: ""
     })
 
@@ -49,41 +51,38 @@ export const ContactSection = () => {
                     I'm always open to discussing new opportunities.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 gradient-border p-8 rounded-lg shadow-xs">
                     <div className="space-y-8">
                         <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
 
                         <div className="space-y-6 justify-center">
-                            <div className="flex items-start space-x-4">
+                            <div className="flex items-center space-x-4">
                                 <div className="p-3 rounded-full bg-primary/10">
-                                    <Mail className="h-6 w-6 text-primary"/>
+                                    <Mail className="h-5 w-5 text-primary"/>
                                 </div>
                                 <div>
-                                    <h4 className="font-medium">Email</h4>
                                     <a href="mailto:samueljjgoh@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                                         samueljjgoh@gmail.com
                                     </a>
                                 </div>
                             </div>
 
-                            <div className="flex items-start space-x-4">
+                            <div className="flex items-center space-x-4">
                                 <div className="p-3 rounded-full bg-primary/10">
-                                    <Phone className="h-6 w-6 text-primary"/>
+                                    <Phone className="h-5 w-5 text-primary"/>
                                 </div>
                                 <div>
-                                    <h4 className="font-medium">Phone</h4>
                                     <a href="tel:+447831566630" className="text-muted-foreground hover:text-primary transition-colors">
                                         +44 7831 566630
                                     </a>
                                 </div>
                             </div>
 
-                            <div className="flex items-start space-x-4">
+                            <div className="flex items-center space-x-4">
                                 <div className="p-3 rounded-full bg-primary/10">
-                                    <Map className="h-6 w-6 text-primary"/>
+                                    <MapPin className="h-5 w-5 text-primary"/>
                                 </div>
                                 <div>
-                                    <h4 className="font-medium">Location</h4>
                                     <a className="text-muted-foreground hover:text-primary transition-colors">
                                         Manchester, UK
                                     </a>
@@ -92,7 +91,7 @@ export const ContactSection = () => {
                         </div>
 
                         <div className="pt-8">
-                            <h4 className="font-semibold mb-4 text-2xl">Connect With Me</h4>
+                            <h4 className="font-semibold mb-6 text-2xl">Connect With Me</h4>
                             <div className="flex space-x-4 justify-center">
                                 <a
                                     href="https://www.linkedin.com/in/samuel-jun-je-goh/"
@@ -110,48 +109,62 @@ export const ContactSection = () => {
                                 >
                                     <FaInstagram className="h-8 w-8" />
                                 </a>
+                                <a
+                                    href="https://github.com/SamuelJJGoh"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="text-muted-foreground hover:text-primary transition-colors"
+                                >
+                                    <FaGithub className="h-8 w-8" />
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <div className="bg-card p-8 rounded-lg shadow-xs">
-                        <h3 className="text-2xl font-semibold mb-6">Send A Message</h3>
-
+                    <div>
                         <form className="space-y-6" onSubmit={handleSubmit}>
-                            <div>
-                                <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
+                            <div className="relative">
+                                <User className="h-5 w-5 text-muted-foreground absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"/>
                                 <input 
                                     type="text" 
-                                    id="name" 
                                     name="name" 
                                     required 
                                     value={formData.name}
-                                    className="w-full px-4 py-3 rounded-md border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                                    placeholder="Jane Doe..."
+                                    className="w-full pl-10 pr-4 py-3 rounded-md border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                                    placeholder="Name"
                                     onChange={(e) => setFormData({...formData, name: e.target.value})}/>
                             </div>
 
-                            <div>
-                                <label htmlFor="email" className="block text-sm font-medium mb-2">Your Email</label>
+                            <div className="relative">
+                                <Mail className="h-5 w-5 text-muted-foreground absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"/>
                                 <input 
                                     type="email" 
-                                    id="email" 
                                     name="email" 
                                     required 
                                     value={formData.email}
-                                    className="w-full px-4 py-3 rounded-md border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                                    placeholder="jane123@gmail.com"
+                                    className="w-full pl-10 pr-4 py-3 rounded-md border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                                    placeholder="Email"
                                     onChange={(e) => setFormData({...formData, email: e.target.value})}/>
                             </div>
 
+                            <div className="relative">
+                                <MessageCircle className="h-5 w-5 text-muted-foreground absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"/>
+                                <input 
+                                    type="text" 
+                                    name="subject" 
+                                    required 
+                                    value={formData.subject}
+                                    className="w-full pl-10 pr-4 py-3 rounded-md border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                                    placeholder="Subject"
+                                    onChange={(e) => setFormData({...formData, subject: e.target.value})}/>
+                            </div>
+
                             <div>
-                                <label htmlFor="message" className="block text-sm font-medium mb-2">Your Message</label>
                                 <textarea 
-                                    id="message" 
                                     name="message" 
                                     required 
                                     value={formData.message}
-                                    className="w-full px-4 py-3 rounded-md border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
+                                    className="w-full h-40 px-4 py-3 rounded-md border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                                     placeholder="Hello, I'd like to talk about..."
                                     onChange={(e) => setFormData({...formData, message: e.target.value})}/>
                             </div>

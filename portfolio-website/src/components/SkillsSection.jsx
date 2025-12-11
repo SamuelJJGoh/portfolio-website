@@ -9,25 +9,25 @@ const skills = [
   { name: "React", image: "/skills/react.png", level: 70, category: "frontend" },
   { name: "React Native", image: "/skills/react-native.png", level: 60, category: "frontend" },
   { name: "TypeScript", image: "/skills/ts.png", level: 40, category: "frontend" },
-  { name: "Tailwind CSS", image: "/skills/tailwind.png", level: 30, category: "frontend" },
   { name: "Bootstrap 5", image: "/skills/bootstrap.png", level: 35, category: "frontend" },
+  { name: "Tailwind CSS", image: "/skills/tailwind.png", level: 30, category: "frontend" },
 
   // Backend
+  { name: "Python", image: "/skills/python.png", level: 85, category: "backend" },
   { name: "Node.js", image: "/skills/node-js.png", level: 70, category: "backend" },
   { name: "Express.js", image: "/skills/express.png", level: 65, category: "backend" },
   { name: "MongoDB", image: "/skills/mongo.png", level: 65, category: "backend" },  
   { name: "MySQL", image: "/skills/mysql.png", level: 60, category: "backend" },
-  { name: "Python", image: "/skills/python.png", level: 85, category: "backend" },
   { name: "Flask", image: "/skills/flask.png", level: 60, category: "backend" },
-  { name: "Jinja2", image: "/skills/jinja.png", level: 55, category: "backend" },
   { name: "Java", image: "/skills/java.png", level: 60, category: "backend" },
+  { name: "Jinja2", image: "/skills/jinja.png", level: 55, category: "backend" },
 
   // Tools
   { name: "Git/GitHub", image: "/skills/git.png", level: 85, category: "tools" },
+  { name: "Jupyter", image: "/skills/jupyter.png", level: 80, category: "tools" },
   { name: "Postman", image: "/skills/postman.png", level: 75, category: "tools" },
-  { name: "Expo", image: "/skills/expo.png", level: 60, category: "tools" },
   { name: "AWS", image: "/skills/aws.png", level: 50, category: "tools" },
-  { name: "Jupyter", image: "/skills/jupyter.png", level: 80, category: "tools" }
+  { name: "Expo", image: "/skills/expo.svg", level: 20, category: "tools" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
@@ -57,7 +57,7 @@ export const SkillsSection = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredSkills.map((skill, key) => (
-                        <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover">
+                        <div key={key} className="gradient-border p-6 rounded-lg shadow-xs card-hover">
                             <div className="text-left mb-4 flex items-center justify-around">
                                 <h3 className="font-semibold text-lg">{skill.name}</h3> 
                                     <img
@@ -71,9 +71,10 @@ export const SkillsSection = () => {
                                                 ? "w-10 h-10"
                                                 : skill.name === "Jinja2"
                                                 ? "w-15 h-15"
-                                                : skill.name === "Expo"
+                                                : skill.name === "Flask"
                                                 ? "w-15 h-15"
                                                 : "w-[50px] h-[50px]"
+                                            
                                         )}
                                     />
                             </div>
