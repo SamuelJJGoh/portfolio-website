@@ -1,5 +1,4 @@
-import { ArrowRight, ExternalLink } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
+import { ExternalLink } from "lucide-react";
 
 const projects = [
     {

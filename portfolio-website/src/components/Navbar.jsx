@@ -1,10 +1,11 @@
 import {cn} from '@/lib/utils.js'
-import { Menu, X, House, User, CodeXml, GitCompare, Mail } from 'lucide-react';
+import { Menu, X, House, User, Briefcase, CodeXml, GitCompare, Mail } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const navItems = [
     { icon: <House size={16} />, name: "Home", href: "#hero" },
     { icon: <User size={16} />, name: "About", href: "#about" },
+    { icon: <Briefcase size={16} />, name: "Experiences", href: "#experiences" },
     { icon: <CodeXml size={16} />, name: "Skills", href: "#skills" },
     { icon: <GitCompare size={16} />, name: "Projects", href: "#projects" },
     { icon: <Mail size={16} />, name: "Contact", href: "#contact" }
