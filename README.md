@@ -2,14 +2,14 @@
 
 This is my portfolio website made with ReactJS and Tailwind CSS. This is a single-page website that showcases my skills, projects and experiences in the field of web and mobile development. View the live site [here](https://samueljjgoh.com)
 
-![Portfolio Screenshot](./public/preview.png)
+![Portfolio Screenshot](./portfolio-website/public/preview.png)
 
 ## Installation
 
 To run this portfolio locally, follow these steps: 
-1) Clone the repository
+1) Clone the repository (e.g. git clone https://github.com/SamuelJJGoh/portfolio-website.git)
 ```bash
-git clone https://github.com/your-username/portfolio-website.git (https://github.com/SamuelJJGoh/portfolio-website.git)
+git clone https://github.com/your-username/portfolio-website.git 
 ```
 2) Navigate to the project directory
 ```
@@ -26,9 +26,9 @@ npm run dev
 5) Open your browser and visit http://localhost:5173
 
 ## Features
-- **Responsive Design:** The layout is fully responsive and optimized for desktops, tablets, and mobile devices using Tailwind CSS.
+- **Responsive Design:** The layout is fully responsive and optimised for desktops, tablets, and mobile devices using Tailwind CSS.
 - **Project Showcase:** A curated list of my best projects with descriptions, tech stacks, and external links to source code or demos.
-- **Experience and Skills Section:** Showcases my profiency and background in different programming languages, libraries/frameworks and tools.
+- **Experience and Skills Section:** Showcases my proficiency and background in different programming languages, libraries/frameworks and tools.
 - **Contact Form:** Integrated with EmailJS to allow visitors to send messages directly through the website.
 - **Light/Dark Mode:** Custom dark/light theme powered by CSS variables and Tailwind utilities.
 
