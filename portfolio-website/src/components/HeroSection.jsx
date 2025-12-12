@@ -18,12 +18,12 @@ export const HeroSection = () => {
                         I turn ideas into clean, functional web experiences.
                     </p>
 
-                    <div className="flex items-center justify-center gap-5 pt-4 opacity-0 animate-fade-in-delay-4">
-                        <a href="#projects" className="cosmic-button">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 opacity-0 animate-fade-in-delay-4">
+                        <a href="#projects" className="cosmic-button w-full sm:w-auto text-center">
                             View My Work
                         </a>
-                        <a className="cosmic-button w-fit flex items-center gap-3" 
-                           href="https://github.com/SamuelJJGoh" target="_blank">
+                        <a className="cosmic-button w-full sm:w-auto flex items-center justify-center gap-3" 
+                           href="https://github.com/SamuelJJGoh" target="_blank" rel="noreferrer">
                             <FaGithub /> Check My GitHub <ArrowRight size={16}/>
                         </a>
                     </div>

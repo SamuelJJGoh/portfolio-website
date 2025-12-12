@@ -69,7 +69,7 @@ export const AboutSection = () => {
                             <a href="#contact" className="cosmic-button">
                                 Get In Touch
                             </a>
-                            <a href="/SamuelGohCV.pdf" download className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 flex items-center gap-2">
+                            <a href="/SamuelGohCV.pdf" download className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 flex items-center justify-center gap-2">
                                 <FaRegFilePdf className="h-5 w-5" />
                                 Download CV
                             </a>
