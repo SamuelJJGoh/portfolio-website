@@ -30,7 +30,7 @@ const projects = [
         title: "Automated Birthday Reminder",
         description: "Daily email reminder that checks a CSV of friends’ birthdays (UK timezone) and emails me when there’s a match.",
         image: "/projects/BirthdayReminder.png",
-        tags: ["Python", "Automation", "pandas", "SMTP"],
+        tags: ["Python", "GitHub Action", "pandas", "SMTP"],
         url: "https://github.com/SamuelJJGoh/automated-birthday-reminder"
     },
     
