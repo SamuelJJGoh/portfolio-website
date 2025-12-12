@@ -19,11 +19,18 @@ cd portfolio-website
 ```bash
 npm install
 ```
-4) Start the development server
+4) Get the Service ID, Template ID and Public Key from your EmailJS account and paste it in the .env file, like this :
+
+```
+VITE_SERVICE_ID = your_service_id
+VITE_TEMPLATE_ID = your_template_id
+VITE_PUBLIC_KEY = your_public_key
+```
+5) Start the development server
 ```bash
 npm run dev
 ```
-5) Open your browser and visit http://localhost:5173
+6) Open your browser and visit http://localhost:5173
 
 ## Features
 - **Responsive Design:** The layout is fully responsive and optimised for desktops, tablets, and mobile devices using Tailwind CSS.
@@ -51,6 +58,10 @@ The project structure follows a standard React application layout. Some key dire
 - `src/components` — reusable React UI components
 - `src/pages` — route level components (Home page and NotFound page)
 - `index.css` - global Tailwind CSS styling used across the website
+- `.env` - file to store the Service ID, Template ID and Public Key from EmailJS account when implementing the contact form 
+
+## License
+This project is licensed under the MIT License.
 
 ## Thank you!
 - Thank you for exploring my portfolio! If you have any feedback or opportunities to discuss, feel free to reach out.
