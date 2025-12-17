@@ -19,6 +19,14 @@ const projects = [
     },
     {
         id: 3,
+        title: "Unix Shell",
+        description: "Unix-like shell implemented from scratch in Python with pipes, redirection, history persistence, and autocompletion.",
+        image: "/projects/UnixShell.jpg",
+        tags: ["Python", "Unix", "OS"],
+        url: "https://github.com/SamuelJJGoh/codecrafters-shell-python"
+    },
+    {
+        id: 4,
         title: "PL Match Predictor",
         description: "A machine learning model that uses scikit-learn to predict Premier League matches.",
         image: "/projects/PremierLeaguePrediction.png",
@@ -26,7 +34,7 @@ const projects = [
         url: "https://github.com/SamuelJJGoh/premier-league-match-prediction"
     },
     {
-        id: 4,
+        id: 5,
         title: "Automated Birthday Reminder",
         description: "Daily email reminder that checks a CSV of friends’ birthdays (UK timezone) and emails me when there’s a match.",
         image: "/projects/BirthdayReminder.png",
