@@ -41,6 +41,14 @@ const projects = [
         tags: ["Python", "GitHub Action", "pandas", "SMTP"],
         url: "https://github.com/SamuelJJGoh/automated-birthday-reminder"
     },
+    {
+        id: 6,
+        title: "Lead Management App",
+        description: "A full-stack Lead Management app built with Next.js, Node.js, Express, and MongoDB.",
+        image: "/projects/LeadManagementApp.png",
+        tags: ["Next.js", "Node.js", "Express", "MongoDB"],
+        url: "https://lead-management-app-eta.vercel.app/"
+    }
     
 ]
 

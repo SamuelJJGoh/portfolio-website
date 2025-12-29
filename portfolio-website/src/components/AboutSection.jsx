@@ -54,15 +54,15 @@ export const AboutSection = () => {
                         </h3>
 
                         <p className="text-muted-foreground">
-                            I am a Computer Science and Mathematics graduate from the University of Manchester
-                            with a strong foundation in software engineering, full-stack development, and 
-                            modern web technologies. I also have strong proficiency in Python, with experience 
-                            building APIs, automation tools, and data-driven applications.
+                            I am a Computer Science and Mathematics graduate from the University of Manchester, currently based in <span className="text-primary">Manchester, UK. </span>
                         </p>
                         <p className="text-muted-foreground">
-                            I primarily build dynamic web applications using the MERN stack, crafting clean and responsive 
+                            I primarily build full-stack web applications using the MERN stack, crafting clean and responsive 
                             interfaces with React and designing robust backend systems with Node.js and Express. 
-                            I have experience working with both SQL and NoSQL databases.
+                        </p>
+                        <p className="text-muted-foreground">
+                            I have experience working with both SQL and NoSQL databases, and strong proficiency in Python, 
+                            where I've built APIs, automation tools, and data-driven applications. I am fluent in both English and Chinese Mandarin.
                         </p>
                         
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">

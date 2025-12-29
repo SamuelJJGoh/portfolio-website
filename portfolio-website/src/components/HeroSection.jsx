@@ -7,6 +7,11 @@ export const HeroSection = () => {
         <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-4">
             <div className="container max-w-4xl mx-auto text-center z-10">
                 <div className="space-y-6">
+                    <span className="px-6 py-2 rounded-full border border-primary inline-flex items-center justify-center gap-2">
+                        <span className="h-2.5 w-2.5 rounded-full bg-green-500" aria-hidden="true"></span>
+                        Open To Work
+                    </span>
+
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                         <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
                         <span className="block sm:inline text-primary opacity-0 animate-fade-in-delay-1"> Samuel Goh,</span>
@@ -27,7 +32,6 @@ export const HeroSection = () => {
                             <FaGithub /> Check My GitHub <ArrowRight size={16}/>
                         </a>
                     </div>
-
                 </div>
             </div>
 

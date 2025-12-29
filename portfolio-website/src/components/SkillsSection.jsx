@@ -7,9 +7,10 @@ const skills = [
   { name: "CSS", image: "/skills/css.png", level: 80, category: "frontend" },
   { name: "JavaScript", image: "/skills/js.png", level: 75, category: "frontend" },
   { name: "React", image: "/skills/react.png", level: 70, category: "frontend" },
+  { name: "Next.js", image: "/skills/next-js.png", level: 70, category: "frontend" },
   { name: "React Native", image: "/skills/react-native.png", level: 60, category: "frontend" },
   { name: "TypeScript", image: "/skills/ts.png", level: 40, category: "frontend" },
-  { name: "Bootstrap 5", image: "/skills/bootstrap.png", level: 35, category: "frontend" },
+  { name: "Bootstrap 5", image: "/skills/bootstrap.png", level: 30, category: "frontend" },
   { name: "Tailwind CSS", image: "/skills/tailwind.png", level: 30, category: "frontend" },
 
   // Backend
@@ -24,10 +25,9 @@ const skills = [
 
   // Tools
   { name: "Git/GitHub", image: "/skills/git.png", level: 85, category: "tools" },
-  { name: "Jupyter", image: "/skills/jupyter.png", level: 80, category: "tools" },
   { name: "Postman", image: "/skills/postman.png", level: 75, category: "tools" },
   { name: "AWS", image: "/skills/aws.png", level: 50, category: "tools" },
-  { name: "Expo", image: "/skills/expo.svg", level: 20, category: "tools" },
+  { name: "Expo", image: "/skills/expo.svg", level: 40, category: "tools" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
