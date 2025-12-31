@@ -3,31 +3,24 @@ import {cn} from '@/lib/utils';
 
 const skills = [
   // Frontend
-  { name: "HTML5", image: "/skills/html.png", level: 90, category: "frontend" },
-  { name: "CSS", image: "/skills/css.png", level: 80, category: "frontend" },
-  { name: "JavaScript", image: "/skills/js.png", level: 75, category: "frontend" },
-  { name: "React", image: "/skills/react.png", level: 70, category: "frontend" },
-  { name: "Next.js", image: "/skills/next-js.png", level: 70, category: "frontend" },
-  { name: "React Native", image: "/skills/react-native.png", level: 60, category: "frontend" },
-  { name: "TypeScript", image: "/skills/ts.png", level: 40, category: "frontend" },
-  { name: "Bootstrap 5", image: "/skills/bootstrap.png", level: 30, category: "frontend" },
-  { name: "Tailwind CSS", image: "/skills/tailwind.png", level: 30, category: "frontend" },
+  { name: "JavaScript", description: "Core web language", image: "/skills/js.png", category: "frontend" },
+  { name: "TypeScript", description: "JavaScript but better", image: "/skills/ts.png", category: "frontend" },
+  { name: "React", description: "JavaScript library", image: "/skills/react.png", category: "frontend" },
+  { name: "React Native", description: "Native apps with React", image: "/skills/react-native.png", category: "frontend" },
+  { name: "Next.js", description: "React framework", image: "/skills/next-js.png", category: "frontend" },
+  { name: "Tailwind CSS", description: "Utility-first CSS", image: "/skills/tailwind.png", category: "frontend" },
 
   // Backend
-  { name: "Python", image: "/skills/python.png", level: 85, category: "backend" },
-  { name: "Node.js", image: "/skills/node-js.png", level: 70, category: "backend" },
-  { name: "Express", image: "/skills/express.png", level: 65, category: "backend" },
-  { name: "MongoDB", image: "/skills/mongo.png", level: 65, category: "backend" },  
-  { name: "MySQL", image: "/skills/mysql.png", level: 60, category: "backend" },
-  { name: "Flask", image: "/skills/flask.png", level: 60, category: "backend" },
-  { name: "Java", image: "/skills/java.png", level: 60, category: "backend" },
-  { name: "Jinja2", image: "/skills/jinja.png", level: 55, category: "backend" },
+  { name: "Python", description: "General-purpose language", image: "/skills/python.png", category: "backend" },
+  { name: "Node.js", description: "JavaScript runtime", image: "/skills/node-js.png", category: "backend" },
+  { name: "Express", description: "Node.js web framework", image: "/skills/express.png", category: "backend" },
+  { name: "MongoDB", description: "NoSQL database", image: "/skills/mongo.png", category: "backend" },
 
   // Tools
-  { name: "Git/GitHub", image: "/skills/git.png", level: 85, category: "tools" },
-  { name: "Postman", image: "/skills/postman.png", level: 75, category: "tools" },
-  { name: "AWS", image: "/skills/aws.png", level: 50, category: "tools" },
-  { name: "Expo", image: "/skills/expo.svg", level: 40, category: "tools" },
+  { name: "Git", description: "Version control", image: "/skills/git.png", category: "tools" },
+  { name: "Postman", description: "API testing", image: "/skills/postman.png", category: "tools" },
+  { name: "AWS", description: "Cloud services", image: "/skills/aws.png", category: "tools" },
+  { name: "Expo", description: "React Native tooling", image: "/skills/expo.svg", category: "tools" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
@@ -57,34 +50,32 @@ export const SkillsSection = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredSkills.map((skill, key) => (
-                        <div key={key} className="gradient-border p-6 rounded-lg shadow-xs card-hover">
-                            <div className="text-left mb-4 flex items-center justify-around">
-                                <h3 className="font-semibold text-lg">{skill.name}</h3> 
-                                    <img
-                                        src={skill.image}
-                                        alt={skill.name}
-                                        className={cn(
-                                            "object-contain",
-                                            skill.name === "MongoDB"
-                                                ? "w-20 h-20"
-                                                : skill.name === "Python"
-                                                ? "w-10 h-10"
-                                                : skill.name === "Jinja2"
-                                                ? "w-15 h-15"
-                                                : skill.name === "Flask"
-                                                ? "w-15 h-15"
-                                                : "w-[50px] h-[50px]"
-                                            
-                                        )}
-                                    />
-                            </div>
-                            <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                                <div className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]" 
-                                     style={{width: `${skill.level}%`}}
+                        <div key={key} className="gradient-border p-6 rounded-lg shadow-xs card-hover h-full min-h-[120px]">
+                            <div className="text-left flex items-center justify-between gap-4 h-full">
+                                <div className="flex flex-col gap-1">
+                                    <h3 className="font-semibold text-lg">{skill.name}</h3>
+                                    <p className="text-sm text-muted-foreground">{skill.description}</p>
+                                </div>
+                                <img
+                                    src={skill.image}
+                                    alt={skill.name}
+                                    className={cn(
+                                        "object-contain",
+                                        skill.name === "MongoDB"
+                                            ? "w-20 h-20"
+                                            : skill.name === "Python"
+                                            ? "w-10 h-10"
+                                            : skill.name === "Jinja2"
+                                            ? "w-15 h-15"
+                                            : skill.name === "Flask"
+                                            ? "w-15 h-15"
+                                            : skill.name === "JavaScript"
+                                            ? "w-10 h-10"
+                                            : skill.name === "TypeScript"
+                                            ? "w-10 h-10"
+                                            : "w-[50px] h-[50px]"
+                                    )}
                                 />
-                            </div>
-                            <div className="text-right mt-1 ">
-                                <span className="text-sm text-muted-foreground">{skill.level}%</span>
                             </div>
                         </div>
                     ))}

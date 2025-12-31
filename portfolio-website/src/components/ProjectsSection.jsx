@@ -3,6 +3,14 @@ import { ExternalLink } from "lucide-react";
 const projects = [
     {
         id: 1,
+        title: "Lead Management App",
+        description: "A full-stack Lead Management app built with Next.js, Node.js, Express, and MongoDB.",
+        image: "/projects/LeadManagementApp.png",
+        tags: ["Next.js", "Node.js", "Express", "MongoDB"],
+        url: "https://lead-management-app-eta.vercel.app/"
+    },
+    {
+        id: 2,
         title: "BlogNest",
         description: "A Flask-based blog application with Bootstrap styling and a PostgreSQL database.",
         image: "/projects/BlogNest.png",
@@ -10,7 +18,7 @@ const projects = [
         url: "https://github.com/SamuelJJGoh/python-flask-blog-website"
     },
     {
-        id: 2,
+        id: 3,
         title: "Weather App",
         description: "Responsive weather app with an Express proxy: search cities, view current conditions and 5‑day forecasts, toggle °C/°F, and save favourite cities.",
         image: "/projects/WeatherApp.png",
@@ -18,7 +26,7 @@ const projects = [
         url: "https://github.com/SamuelJJGoh/weather-app"
     },
     {
-        id: 3,
+        id: 4,
         title: "Unix Shell",
         description: "Unix-like shell implemented from scratch in Python with pipes, redirection, history persistence, and autocompletion.",
         image: "/projects/UnixShell.jpg",
@@ -26,7 +34,7 @@ const projects = [
         url: "https://github.com/SamuelJJGoh/codecrafters-shell-python"
     },
     {
-        id: 4,
+        id: 5,
         title: "PL Match Predictor",
         description: "A machine learning model that uses scikit-learn to predict Premier League matches.",
         image: "/projects/PremierLeaguePrediction.png",
@@ -34,21 +42,13 @@ const projects = [
         url: "https://github.com/SamuelJJGoh/premier-league-match-prediction"
     },
     {
-        id: 5,
+        id: 6,
         title: "Automated Birthday Reminder",
         description: "Daily email reminder that checks a CSV of friends’ birthdays (UK timezone) and emails me when there’s a match.",
         image: "/projects/BirthdayReminder.png",
         tags: ["Python", "GitHub Action", "pandas", "SMTP"],
         url: "https://github.com/SamuelJJGoh/automated-birthday-reminder"
     },
-    {
-        id: 6,
-        title: "Lead Management App",
-        description: "A full-stack Lead Management app built with Next.js, Node.js, Express, and MongoDB.",
-        image: "/projects/LeadManagementApp.png",
-        tags: ["Next.js", "Node.js", "Express", "MongoDB"],
-        url: "https://lead-management-app-eta.vercel.app/"
-    }
     
 ]
 
