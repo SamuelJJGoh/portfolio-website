@@ -3,6 +3,22 @@ import { ExternalLink } from "lucide-react";
 const projects = [
     {
         id: 1,
+        title: "DevLog",
+        description: "A full‑stack MERN productivity web application that helps developers log their coding sessions and manage learning resources in one place.",
+        image: "/projects/DevLog.png",
+        tags: ["React", "Node.js", "Express", "MongoDB"],
+        url: "https://devlogapp.duckdns.org/"
+    },
+    {
+        id: 2,
+        title: "Unix Shell",
+        description: "Unix-like shell implemented from scratch in Python with pipes, redirection, history persistence, and autocompletion.",
+        image: "/projects/UnixShell.jpg",
+        tags: ["Python", "Unix", "OS"],
+        url: "https://github.com/SamuelJJGoh/codecrafters-shell-python"
+    },
+    {
+        id: 3,
         title: "Lead Management App",
         description: "A full-stack Lead Management app built with Next.js, Node.js, Express, and MongoDB.",
         image: "/projects/LeadManagementApp.png",
@@ -10,28 +26,12 @@ const projects = [
         url: "https://lead-management-app-eta.vercel.app/"
     },
     {
-        id: 2,
+        id: 4,
         title: "BlogNest",
         description: "A Flask-based blog application with Bootstrap styling and a PostgreSQL database.",
         image: "/projects/BlogNest.png",
         tags: ["Python", "Flask", "Bootstrap", "SQLAlchemy", "Jinja2"],
         url: "https://github.com/SamuelJJGoh/python-flask-blog-website"
-    },
-    {
-        id: 3,
-        title: "Weather App",
-        description: "Responsive weather app with an Express proxy: search cities, view current conditions and 5‑day forecasts, toggle °C/°F, and save favourite cities.",
-        image: "/projects/WeatherApp.png",
-        tags: ["JavaScript", "HTML/CSS", "Node.js", "Express"],
-        url: "https://github.com/SamuelJJGoh/weather-app"
-    },
-    {
-        id: 4,
-        title: "Unix Shell",
-        description: "Unix-like shell implemented from scratch in Python with pipes, redirection, history persistence, and autocompletion.",
-        image: "/projects/UnixShell.jpg",
-        tags: ["Python", "Unix", "OS"],
-        url: "https://github.com/SamuelJJGoh/codecrafters-shell-python"
     },
     {
         id: 5,
