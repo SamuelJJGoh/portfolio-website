@@ -34,7 +34,7 @@ export const AboutSection = () => {
                             </a>
                             <a href="/SamuelGohCV.pdf" target="_blank" rel="noreferrer" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 flex items-center justify-center gap-2">
                                 <FaRegFilePdf className="h-5 w-5" />
-                                Download CV
+                                View CV
                             </a>
                         </div>
                     </div>
